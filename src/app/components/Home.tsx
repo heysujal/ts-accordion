@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import Accordion from "../components/accordion";
+import Accordion from "./accordion";
 
 export default function Home(){
     const [multiOpen, setMultiOpen] = useState(true);
