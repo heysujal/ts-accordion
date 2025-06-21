@@ -71,8 +71,7 @@ const Accordion = ({ multiOpen }: AccordionProps) => {
     }
   };
 
-  return (
-    <div className="accordion">
+  return <div className="accordion">
       {accordionData.map(({ id, title, content }: accordionEntry) =>
          (
           <div className="accordion-bar" key={id}>
@@ -87,7 +86,6 @@ const Accordion = ({ multiOpen }: AccordionProps) => {
         )
       )}
     </div>
-  );
 };
 
 export default Accordion;
