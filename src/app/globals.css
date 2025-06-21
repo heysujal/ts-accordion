@@ -1,5 +1,96 @@
-.bartitle{
-  border: 1px solid red;
-  background: rgb(112, 103, 103);
-  color: white;
+/* Set a modern, readable font for the whole app */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Accordion container */
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #fff;
+  padding: 0.5rem 0;
+  font-family: inherit;
+}
+
+/* Each bar */
+.accordion-bar {
+  border-bottom: 1px solid #e5e5e5;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+
+.accordion-bar:last-child {
+  border-bottom: none;
+}
+
+/* Bar title */
+.bartitle, .accordion-bar-title {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+  border: none;
+  outline: none;
+  color: #222;
+  font-family: inherit;
+}
+
+.bartitle:hover, .accordion-bar-title:hover {
+  background: #ececec;
+}
+
+/* Bar content */
+.accordion-bar-content {
+  padding: 1rem 1.5rem;
+  background: #fafbfc;
+  font-size: 1rem;
+  color: #444;
+  animation: fadeIn 0.2s;
+  font-family: inherit;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* General button style */
+.button-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  padding: 0.6em 1.4em;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin: 0.5em auto;
+  display: block;
+}
+
+button:hover, button:focus {
+  background: #2563eb;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.10);
 }

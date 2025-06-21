@@ -72,20 +72,21 @@ const Accordion = ({ multiOpen }: AccordionProps) => {
   };
 
   return (
-    <>
+    <div className="accordion">
       {accordionData.map(({ id, title, content }: accordionEntry) =>
          (
-          <Bar
-            key={id}
-            id={id}
-            title={title}
-            content={content}
-            handleToggle={handleToggle}
-            show={openIds.includes(id)}
-          />
+          <div className="accordion-bar" key={id}>
+            <Bar
+              id={id}
+              title={title}
+              content={content}
+              handleToggle={handleToggle}
+              show={openIds.includes(id)}
+            />
+          </div>
         )
       )}
-    </>
+    </div>
   );
 };
 

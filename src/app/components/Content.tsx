@@ -6,7 +6,7 @@ interface ContentProps {
 }
 
 const Content = ({ content, show }: ContentProps): ReactNode => {
-  return show && <div>{content}</div>;
+  return show && <div className="accordion-bar-content">{content}</div>;
 };
 
 export default Content;
